@@ -31,6 +31,17 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My To-Do List" id="gXF-9x-9yy">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="IUG-qd-NFz">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="247" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1xJ-CO-vYy">
+                                <rect key="frame" x="20" y="7" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
+                                <state key="normal" title="Daily Stats"/>
+                                <connections>
+                                    <segue destination="eHa-qD-Wrt" kind="show" identifier="dailyStatsSegue" id="8E6-2s-W6W"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CiN-oX-ES5">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="dRV-lt-A8h"/>
@@ -41,6 +52,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEq-ou-IP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="525" y="387"/>
+        </scene>
+        <!--Daily Stats-->
+        <scene sceneID="7oS-C7-S3G">
+            <objects>
+                <tableViewController id="eHa-qD-Wrt" customClass="DailyStatsViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="a2a-Ho-cLH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dailyStatsPrototypeCell" id="4ey-eP-6Bt">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ey-eP-6Bt" id="Bdj-yf-8n5">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eHa-qD-Wrt" id="0Qn-IL-mRo"/>
+                            <outlet property="delegate" destination="eHa-qD-Wrt" id="ybI-ny-UmL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Daily Stats" id="FpC-po-Zg8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83C-Yd-npL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="-209"/>
         </scene>
         <!--New To-Do Item-->
         <scene sceneID="tne-QT-ifu">

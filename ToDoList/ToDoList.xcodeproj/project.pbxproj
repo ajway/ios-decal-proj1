@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E79420801C86CC92003D7C0F /* DailyStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E794207F1C86CC92003D7C0F /* DailyStatsViewController.swift */; };
 		E7C73BDE1C8685D30070856F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C73BDD1C8685D30070856F /* ToDoItem.swift */; };
 		E7F186B51C866B3200CAE9FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F186B41C866B3200CAE9FB /* AppDelegate.swift */; };
 		E7F186B71C866B3200CAE9FB /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F186B61C866B3200CAE9FB /* AddToDoViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E794207F1C86CC92003D7C0F /* DailyStatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyStatsViewController.swift; sourceTree = "<group>"; };
 		E7C73BDC1C8684710070856F /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		E7C73BDD1C8685D30070856F /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		E7F186B11C866B3200CAE9FB /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				E7F186E71C867AD100CAE9FB /* ToDoListTableViewController.swift */,
+				E794207F1C86CC92003D7C0F /* DailyStatsViewController.swift */,
 				E7C73BDD1C8685D30070856F /* ToDoItem.swift */,
 				E7C73BDC1C8684710070856F /* TableViewController.h */,
 				E7F186B41C866B3200CAE9FB /* AppDelegate.swift */,
@@ -268,6 +271,7 @@
 				E7F186B51C866B3200CAE9FB /* AppDelegate.swift in Sources */,
 				E7C73BDE1C8685D30070856F /* ToDoItem.swift in Sources */,
 				E7F186E81C867AD100CAE9FB /* ToDoListTableViewController.swift in Sources */,
+				E79420801C86CC92003D7C0F /* DailyStatsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

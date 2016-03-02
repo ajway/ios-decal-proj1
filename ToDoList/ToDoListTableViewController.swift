@@ -23,6 +23,7 @@ import UIKit
     }
     
     var toDoItems: NSMutableArray = []
+    var completedItems: NSMutableArray = []
     var deleteIndexPath: NSIndexPath? = nil
     var timer: NSTimer!
     
@@ -37,7 +38,7 @@ import UIKit
         self.toDoItems.addObject(item1)
         let item2 = ToDoItem(name: "Study for CS170")
         self.toDoItems.addObject(item2)
-        let item3 = ToDoItem(name: "Play Witcher 3")
+        let item3 = ToDoItem(name: "Go to RSF")
         self.toDoItems.addObject(item3)
         let item4 = ToDoItem(name: "Buy dinner")
         self.toDoItems.addObject(item4)
@@ -92,11 +93,13 @@ import UIKit
         
         if todoitem.completed{
             cell.accessoryType = .Checkmark
+            completedItems.addObject(todoitem)
             //self.timer = NSTimer(timeInterval: 2.0, target: self, selector: deleteItem(todoitem), userInfo: nil, repeats: false)
         }
             
         else{
             cell.accessoryType = .None
+            completedItems.removeObject(todoitem)
         }
         
         return cell
@@ -108,6 +111,13 @@ import UIKit
         tappedItem.completed = !tappedItem.completed
         tableView.reloadData()
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "dailyStatsSegue") {
+            let svc = segue.destinationViewController as! DailyStatsViewController;
+            svc.completedItems = self.completedItems
+        }
     }
     
     
